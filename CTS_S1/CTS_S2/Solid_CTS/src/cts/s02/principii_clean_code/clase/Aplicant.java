@@ -1,12 +1,15 @@
 package Solid_CTS.src.cts.s02.principii_clean_code.clase;
 
+import java.util.Scanner;
+
 public abstract class Aplicant{
 	protected String nume;
 	protected String prenume;
-	protected int varsta;
-	protected int punctaj;
-	protected int nrProiecte;
+	protected Integer varsta;
+	protected Integer punctaj;
+	protected Integer nrProiecte;
 	protected String[] denumireProiect;
+	protected static Integer pragAcceptat=80;
 	
 	public String getNume() {
 		return nume;
@@ -20,46 +23,44 @@ public abstract class Aplicant{
 	public void setPrenume(String prenume) {
 		this.prenume = prenume;
 	}
-	public int getVarsta() {
+	public Integer getVarsta() {
 		return varsta;
 	}
 	public void setVarsta(int varsta) {
 		this.varsta = varsta;
 	}
-	public void statut(){
-		if(punctaj>80)
-			System.out.println("Aplicantul "+nume+" "+prenume+" a fost acceptat.");
-		else
-			System.out.println("Aplicantul "+nume+" "+prenume+" nu a fost acceptat.");
-		}
-	public int getPunctaj() {
+	public void afisareStatus(){
+			System.out.println("Aplicantul "+this.nume+" "+this.prenume+ (punctaj>pragAcceptat ? " " : " nu ") + "a fost acceptat.");
+		
+	}
+	public Integer getPunctaj() {
 		return punctaj;
 	}
 	public void setPunctaj(int punctaj) {
 		this.punctaj = punctaj;
 	}
 	
-	
-
-	
 	public Aplicant() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect) {
+	public Aplicant(String nume, String prenume, Integer varsta, Integer punctaj, Integer nrProiecte, String[] denumireProiect) {
 		super();
 		this.nume = nume;
 		this.prenume = prenume;
 		this.varsta = varsta;
 		this.punctaj = punctaj;
-		this.nrProiecte = nr_proiecte;
+		this.nrProiecte = nrProiecte;
 		this.denumireProiect = denumireProiect;
 	}
-	public int getNr_proiecte() {
+	public Integer getNrProiecte() {
 		return nrProiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte) {
-		this.nrProiecte = nr_proiecte;
+	public void setNrProiecte(int nrProiecte) {
+		this.nrProiecte = nrProiecte;
 	}
-
+	public abstract void afisareFinantare();
+	public void setPunctaj(Integer punctaj) {
+		this.punctaj=punctaj;
+	}
+	
 }

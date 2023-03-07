@@ -3,10 +3,11 @@ package Solid_CTS.src.cts.s02.principii_clean_code.clase;
 import java.util.Arrays;
 
 public class Elev extends Aplicant{
-	private int clasa;
+	private Integer clasa;
 	private String tutore;
+	private static Integer sumaFinantare=30;
 	
-	public int getClasa() {
+	public Integer getClasa() {
 		return clasa;
 	}
 	public void setClasa(int i) {
@@ -31,17 +32,15 @@ public class Elev extends Aplicant{
 		super();
 	}
 	
-	public Elev(String nume, String prenume, int varsta, int punctaj,
-			int nr_proiecte, String[] denumireProiect, int clasa, String tutore) {
+	public Elev(String nume, String prenume, Integer varsta, Integer punctaj,
+			Integer nr_proiecte, String[] denumireProiect, Integer clasa, String tutore) {
 		super(nume,prenume,varsta,punctaj,nr_proiecte,denumireProiect);
 		this.clasa = clasa;
 		this.tutore = tutore;
 	}
 	
-	public int finantare() {
-		int s=30;
-		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
+	public void afisareFinantare() {
+		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste "+Elev.sumaFinantare+" Euro/zi in proiect.");
 	}
 	
 }
