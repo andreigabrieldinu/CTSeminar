@@ -5,5 +5,5 @@
  * @author gabid
  *
  */
-module CTS_SEMINAR1 {
+module CTS_S6 {
 }
