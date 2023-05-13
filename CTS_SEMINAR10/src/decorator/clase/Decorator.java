@@ -14,12 +14,12 @@ public abstract class Decorator implements IBilet{
 		this.bilet.printareBilet();
 	}
 
-	public abstract void printMesajSustinere();
 
 	@Override
 	public String getNumeEchipa1() {
 		return bilet.getNumeEchipa1();
 	}
-	
+	public abstract void printMesajSustinere();
+
 	
 }

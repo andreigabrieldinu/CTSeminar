@@ -2,11 +2,7 @@ package interfaces;
 
 public class BuilderPacient implements IBuilder {
 	private Pacient pacient;
-	private String nume;
-	private boolean patRabatabil;
-	private boolean micDejunInclus;
-	private boolean papuciDeCamera;
-	private boolean halatInterior;
+	
 	public BuilderPacient(String nume) {
 		this.pacient= new Pacient(nume,false,false,false,false);
 	}
@@ -30,8 +26,6 @@ public class BuilderPacient implements IBuilder {
 		pacient.setHalatInterior(halatInterior);
 		return this;
 	}
-	
-	
 	
 	@Override
 	public Pacient build() {

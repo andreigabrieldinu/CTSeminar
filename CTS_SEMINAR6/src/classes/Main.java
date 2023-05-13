@@ -17,10 +17,10 @@ public class Main {
 		System.out.println(pacient2);
 		
 		IBuilder builderPacientV2=new BuilderPacientV2();
-		Pacient pacient3=builderPacientV2.setNume("Ion").setPatRabatabil(true).setPapuciDeCamera(true).build();
-		Pacient pacient4=builderPacientV2.setNume("George").build();
+		Pacient pacient3=builderPacientV2.setNume("Ion").setPatRabatabil(true).build();
+		Pacient pacient4=builderPacientV2.setNume("George").setPapuciDeCamera(true).build();
 		System.out.println(pacient3);
 		System.out.println(pacient4);
+		
 	}
-
 }
