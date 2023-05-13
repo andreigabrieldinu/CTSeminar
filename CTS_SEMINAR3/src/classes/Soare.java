@@ -4,7 +4,7 @@ public class Soare {
     private String culoare;
     private int dimensiune;
 
-    private static Soare instanta = null;
+    private static Soare instanta =null;
     private Soare(String culoare, int dimensiune) {
         this.culoare = culoare;
         this.dimensiune = dimensiune;
